@@ -15,22 +15,22 @@ import java.lang.reflect.Array;
  * @author zjq
  * @date 2020/2/23 22:22
  */
-public class UseArray {
+public class RefArray {
 
     public static void main(String[] args) {
         boolean[] arr = new boolean[10];
         arr[0] = false;
-        boolean o = (boolean)Array.get(arr, 1);
+        boolean o = (boolean) java.lang.reflect.Array.get(arr, 1);
         System.out.println(o);
 
-        boolean aBoolean = Array.getBoolean(arr, 1);
+        boolean aBoolean = java.lang.reflect.Array.getBoolean(arr, 1);
         System.out.println(aBoolean);
 
-        int[] x = (int[])Array.newInstance(int.class,100);
-        Array.setInt(x,99,199);
-        int anInt = Array.getInt(x, 99);
+        int[] x = (int[]) java.lang.reflect.Array.newInstance(int.class,100);
+        java.lang.reflect.Array.setInt(x,99,199);
+        int anInt = java.lang.reflect.Array.getInt(x, 99);
 
-        float[][][] floatArr = (float[][][])Array.newInstance(float.class, 10, 3,4);
+        float[][][] floatArr = (float[][][]) java.lang.reflect.Array.newInstance(float.class, 10, 3,4);
 
         System.out.println(floatArr[0].length);
         System.out.println(floatArr[0][0].length);
