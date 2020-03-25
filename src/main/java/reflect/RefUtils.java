@@ -11,18 +11,21 @@ public class RefUtils {
 
     /**
      * get different methods for two class
-     * @param objectClass class
-     * @param otherObjectClass class
+     * @param classes class
      * @return different methods
      */
-    public static Collection<Method> getDiffMethods(Class<?> objectClass, Class<?> otherObjectClass){
+    public static Collection<Method> getDiffMethods(Class<?> ... classes){
         //public methods:including those declared by the class or interface and those inherited from superclasses and superinterfaces.
-        Method[] methods = objectClass.getMethods();
+        Method[] methods = classes[0].getMethods();
         Collection<Method> union = union(methods, new Method[]{});
-        Collection<Method> sameMethod = getSameMethods(objectClass,otherObjectClass);
-        Collection<Method> objectSameMethod = getSameMethods(objectClass,Object.class);
-        union.removeAll(sameMethod);
+        Collection<Method> objectSameMethod = getSameMethods(classes[0],Object.class);
         union.removeAll(objectSameMethod);
+        for (Class<?> aClass : classes) {
+            if (!classes[0].equals(aClass)){
+                Collection<Method> sameMethod = getSameMethods(classes[0],aClass);
+                union.removeAll(sameMethod);
+            }
+        }
         return union;
 
 
