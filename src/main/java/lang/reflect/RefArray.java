@@ -1,6 +1,4 @@
-package main.java.reflect;
-
-import java.lang.reflect.Array;
+package main.java.lang.reflect;
 
 /**
  * to use reflect

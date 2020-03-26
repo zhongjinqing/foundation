@@ -1,9 +1,6 @@
-package main.java.reflect;
+package main.java.lang.reflect;
 
 
-import jdk.nashorn.internal.ir.annotations.Reference;
-
-import java.lang.annotation.Annotation;
 import java.lang.reflect.*;
 import java.util.Collection;
 

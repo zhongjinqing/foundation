@@ -1,4 +1,4 @@
-package main.java.reflect;
+package main.java.lang.reflect;
 
 import javax.xml.bind.annotation.XmlValue;
 import java.lang.reflect.*;

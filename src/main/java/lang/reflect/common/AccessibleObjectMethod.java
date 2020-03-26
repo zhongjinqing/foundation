@@ -1,6 +1,6 @@
-package main.java.reflect.common;
+package main.java.lang.reflect.common;
 
-import main.java.reflect.RefUtils;
+import main.java.lang.reflect.RefUtils;
 
 import javax.xml.bind.annotation.*;
 import java.lang.reflect.*;

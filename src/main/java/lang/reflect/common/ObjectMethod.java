@@ -1,4 +1,4 @@
-package main.java.reflect.common;
+package main.java.lang.reflect.common;
 
 /**
  * @author zjq
