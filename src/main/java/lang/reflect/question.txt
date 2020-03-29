@@ -1,2 +1,4 @@
 1. member -> isSynthetic
 2.use getAnnotation  to  ElementType.TYPE_USE  annotation return null??
+3.executable getTypeParameters []
+  getAnnotatedReceiverType  null

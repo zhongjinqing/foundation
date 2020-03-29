@@ -6,7 +6,7 @@ import java.lang.annotation.*;
  * @author zjq
  * @date 2020/3/26 13:56
  */
-@Target({ElementType.FIELD})
+@Target({ElementType.FIELD,ElementType.TYPE_USE})
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited
 @Documented
