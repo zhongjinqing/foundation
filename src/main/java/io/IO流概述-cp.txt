@@ -1,0 +1,49 @@
+1.IO分类
+    字节流：
+        输入流：
+            基础流：InputStream
+                1.ByteArrayInputStream
+                2.FileInputStream
+                3.ObjectInputStream
+                4.PipedInputStream
+                5.SequenceInputStream
+                6.StringBufferInputStream
+            过滤流（增强）：FilterInputStream
+                1.BufferedInputStream
+                2.DataInputStream
+                3.LineNumberInputStream
+                4.PushbackInputStream
+        输出流：
+            基础流：OutputStream
+                1.ByteArrayOutputStream
+                2.FileOutputStream
+                3.ObjectOutputStream
+                4.PipedOutputStream
+            过滤流（增强）：FilterOutputStream
+                1.BufferedOutputStream
+                2.DataOutputStream
+                3.PrintStream
+    字符流：
+        输入流：
+             基础流：Reader
+                1.CharArrayReader
+                2.StringReader
+                3.PipedReader
+             过滤流(增强)：为什么不都继承FilterReader
+                1.BufferedReader
+                2.LineNumberReader
+                3.PushbackReader-FilterReader
+        输出流：
+            基础流：Reader
+                1.CharArrayWriter
+                2.StringWriter
+                3.PipedWriter
+            过滤流(增强)：为什么不都继承FilterWriter
+                1.BufferedWriter
+                2.PrintWriter
+                FilterWriter
+        转换流：
+            1.InputStreamReader - 将字节输入流转换成字符输入流
+                1.1FileReader 读取字符文件的便捷类
+            2.OutputStreamWriter
+                2.1FileWriter 编写字符文件的便捷类
