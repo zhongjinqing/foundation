@@ -24,6 +24,14 @@ public class WebClientNio {
             ByteBuffer[] params = {jYou,aoLiGei};
 
             socketChannel.write(params);
+            socketChannel.shutdownOutput();
+            jYou.clear();
+            int len = 0;
+            while ((len = socketChannel.read(jYou)) > -1){
+                jYou.flip();
+                System.out.println(new String(jYou.array(),0,len));
+                jYou.clear();
+            }
 
             socketChannel.close();
 
